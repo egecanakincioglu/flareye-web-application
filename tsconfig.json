@@ -1,0 +1,27 @@
+{
+    "tsx": {
+        "require": ["tsconfig-paths/register"]
+    },
+    "extends": "./node_modules/@tsconfig/strictest/tsconfig.json",
+    "compilerOptions": {
+        "module": "NodeNext",
+        "target": "ESNext",
+        "noEmit": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "baseUrl": ".",
+        "typeRoots": ["node_modules/@types", "Environment/Interface/@types"],
+        "paths": {
+            "@Clients": ["Clients/Infrastructure.ts"],
+            "@Voucher": ["Clients/Voucher/Infrastructure.ts"],
+            "@Supervisor": ["Clients/Supervisor/Infrastructure.ts"],
+            "@Protective": ["Clients/Protective/Infrastructure.ts"],
+            "@Environment": ["Environment/Infrastructure.ts"],
+            "@ClientManager": ["Environment/Functions/Build/Infrastructure.ts"],
+            "@Database": ["Database/Infrastructure.ts"]
+        }
+    },
+    "include": ["**/*.ts", "eslint.config.js"],
+    "exclude": ["node_modules"]
+}

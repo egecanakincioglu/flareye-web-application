@@ -1,0 +1,32 @@
+# ————————————————————————————————————————————————————
+#                  EGECAN AKINCIOĞLU
+# ————————————————————————————————————————————————————
+#
+# Bu dosyada yer alan ayarlar, Egecan Akıncıoğlu botlarının doğru çalışması için önemlidir.
+# Bu ayarları yalnızca geliştirici veya yetkili bir kullanıcı tarafından değiştirilmesi önerilir.
+# Yanlış bir değişiklik, botun işleyişini etkileyebilir veya tamamen çalışmaz hale getirebilir.
+#
+# Lütfen dikkatli olun ve sadece emin olduğunuz ayarları değiştirin. Destek veya bilgi için geliştirici ile iletişime geçin.
+#
+# Developer:
+# - Discord: @cartelizm
+
+TaskDelay: 250
+GiveRoleDelay: 200
+
+Limits:
+    Ban: 3
+    Jail: 3
+    Warn: 3
+    ChatMute: 3
+    Voicemute: 3
+    RoleCreate: 2
+    ChannelCreate: 2
+    Reklam: 1
+    Etiket: 1
+
+Blocking:
+    Kufur: true
+    Spam: true
+    Caps: true
+    Reklam: true

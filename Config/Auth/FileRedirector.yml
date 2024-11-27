@@ -1,0 +1,43 @@
+# ————————————————————————————————————————————————————
+#                  EGECAN AKINCIOĞLU
+# ————————————————————————————————————————————————————
+#
+# Bu dosyada yer alan ayarlar, Egecan Akıncıoğlu botlarının doğru çalışması için önemlidir.
+# Bu ayarları yalnızca geliştirici veya yetkili bir kullanıcı tarafından değiştirilmesi önerilir.
+# Yanlış bir değişiklik, botun işleyişini etkileyebilir veya tamamen çalışmaz hale getirebilir.
+#
+# Lütfen dikkatli olun ve sadece emin olduğunuz ayarları değiştirin. Destek veya bilgi için geliştirici ile iletişime geçin.
+#
+# Developer:
+# - Discord: @cartelizm
+
+ClientManager:
+    Voucher: "./Clients/Voucher/EgecanAkincioglu.ts"
+    Supervisor: "./Clients/Supervisor/EgecanAkincioglu.ts"
+    Protectives: "./Clients/Protective/EgecanAkincioglu.ts"
+    Welcomes: "./Clients/Welcome/EgecanAkincioglu.ts"
+
+HandlerPaths:
+    Event:
+        Voucher: "./Clients/Voucher/Events"
+        Supervisor: "./Clients/Supervisor/Events"
+        Protectives: "./Clients/Protective/Events"
+    Command:
+        Voucher: "./Clients/Voucher/Commands"
+        Supervisor: "./Clients/Supervisor/Commands"
+        Protectives: "./Clients/Protective/Commands"
+
+GlobalClientNames:
+    Voucher: "Voucher"
+    Supervisor: "Supervisor"
+    Protectives: "Protective"
+    Welcomes: "Welcome"
+
+CommandLines:
+    Build:
+        Command: "npx tsx"
+        Data: "data"
+
+Service: 
+    PresenceInterval: "8000"
+    PresenceQueueStart: "0"

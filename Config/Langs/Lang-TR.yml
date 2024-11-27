@@ -1,0 +1,39 @@
+Common:
+    LoadPresence: "Presence ayarları yapılıyor..."
+    LoadEvents: "Eventler sisteme yükleniyor..."
+    LoadCommands: "Komutlar sisteme yükleniyor..."
+    TokenConnected: "Token başarıyla bağlandı!"
+    AnErrorOccurred: "Bir hata meydana geldi:"
+    Caller: "Arayan dosyası alınamadı. Arayan dosya yolu:"
+    BotNameNotFound: "Bot adı bulunamadı."
+    BotStarted: " isimli bot başlatıldı!"
+    BotNotRunning: " isimli bot çalışmıyor"
+    BotStopped: " isimli bot durduruldu!"
+    BotStarting: "Başlatılıyor:"
+    AlreadyRunning: " bot zaten çalışıyor."
+    BotNotFound: "Bot bulunamadı: "
+    Running: "Çalışıyor"
+    Stopped: "Durduruldu"
+    PresenceMessageNotFound: "❌ Hata: Mesaj bulunamadı"
+    
+Handlers:
+    Command:
+        MissingData: "Eksik veri bulunan komut:"
+        SucessfulyLoaded: "Komut başarıyla yüklendi:"
+        APIConnection: "API bağlantısı kurulamadı. Lütfen sistemi yeniden başlatın."
+    Event:
+        MissingData: "Eksik veri bulunan eylem:"
+        SucessfulyLoaded: "Event başarıyla yüklendi:"
+
+CLI:
+    Title: "\nBot Yönetim Sistemi"
+    StartASpesificBot: "1. Belirli bir bot başlat"
+    StopASpesificBot: "2. Belirli bir botu durdur"
+    StartAllBots: "3. Tüm botları başlat"
+    StopAllBots: "4. Tüm botları durdur"
+    ShowBotsStatus: "5. Bot durumunu göster"
+    Exit: "6. Çıkış"
+    QuestionPrompt: "Lütfen bir seçenek seçin:"
+    StartBotNamePrompt: "Başlatılacak botun adını girin: "
+    StopBotNamePrompt: "Durdurulacak botun adını girin: "
+    InvalidOption: "Geçersiz seçenek. Lütfen tekrar deneyin."

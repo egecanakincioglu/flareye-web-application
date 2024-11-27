@@ -1,0 +1,19 @@
+System:
+    Locale: "tr"
+
+Developer:
+    ID: "264241301199781891"
+    Name: "egecanakincioglu"
+
+Guild:
+    ID: "1261737644358897766"
+    Channel: "1263513948523597824"
+    Owners:
+        - "264241301199781891"
+
+Signature: "Developed By Egecan Akıncıoğlu"
+
+Presence:
+    Status: "idle"
+    Messages:
+        - "Egecan Akıncıoğlu 💕"

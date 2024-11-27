@@ -1,0 +1,40 @@
+Common:
+    LoadPresence: "Presence settings are being made..."
+    LoadEvents: "Events are being uploaded to the system..."
+    LoadCommands: "Loading commands into the system..."
+    TokenConnected: "Token connected successfully!"
+    AnErrorOccurred: "An error occurred:"
+    Caller: "Failed to get caller file. Caller stack trace:"
+    BotNameNotFound: "Bot name not found."
+    BotStarted: " has started!"
+    BotNotRunning: " has not working!"
+    BotStopped: " has stopped!"
+    BotStarting: "Starting:"
+    AlreadyRunning: " bot already working."
+    BotNotFound: "Bot bulunamadı: "
+    Running: "WORKING"
+    Stopped: "STOPPED"
+    Users: "Users"
+    PresenceMessageNotFound: "❌ Error: Message not found."
+
+Handlers:
+    Command:
+        MissingData: "Missing data found in command:"
+        SucessfulyLoaded: "The command has been loaded successfully:"
+        APIConnection: "Failed to connect to API. Please restart the system."
+    Event:
+        MissingData: "Missing data found in event:"
+        SucessfulyLoaded: "The command has been loaded successfully:"
+
+CLI:
+    Title: "\nBot Manage System"
+    StartASpesificBot: "1. Start a spesefic bot"
+    StopASpesificBot: "2. Stop a spesific bot"
+    StartAllBots: "3. Start all bots"
+    StopAllBots: "4. Stop all bots"
+    ShowBotsStatus: "5. Show bots status"
+    Exit: "6. Exit"
+    QuestionPrompt: "Please chose one choice:"
+    StartBotNamePrompt: "Enter the starting bots name: "
+    StopBotNamePrompt: "Enter the stoping bots name: "
+    InvalidOption: "Valid choice. Please try again."

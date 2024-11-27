@@ -1,0 +1,22 @@
+# ————————————————————————————————————————————————————
+#                  EGECAN AKINCIOĞLU
+# ————————————————————————————————————————————————————
+#
+# Bu dosyada yer alan ayarlar, Egecan Akıncıoğlu botlarının doğru çalışması için önemlidir.
+# Bu ayarları yalnızca geliştirici veya yetkili bir kullanıcı tarafından değiştirilmesi önerilir.
+# Yanlış bir değişiklik, botun işleyişini etkileyebilir veya tamamen çalışmaz hale getirebilir.
+#
+# Lütfen dikkatli olun ve sadece emin olduğunuz ayarları değiştirin. Destek veya bilgi için geliştirici ile iletişime geçin.
+#
+# Developer:
+# - Discord: @cartelizm
+
+Logger:
+    Info: "INFO"
+    Warn: "WARN"
+    Error: "ERROR"
+    Command: "COMMAND LOADER"
+    Event: "EVENT LOADER"
+
+Console:
+    Prefix: "SYSTEM"

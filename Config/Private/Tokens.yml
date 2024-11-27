@@ -1,0 +1,32 @@
+# ————————————————————————————————————————————————————
+#                  EGECAN AKINCIOĞLU
+# ————————————————————————————————————————————————————
+#
+# Bu dosyada yer alan ayarlar, Egecan Akıncıoğlu botlarının kimlik bilgilerini içerir.
+# Tokenlerin girilmemesi ya da yanlış girilmesi durumunda sistem çalışmayacaktır.
+# Yanlış bir değişiklik, botun işleyişini etkileyebilir veya tamamen çalışmaz hale getirebilir.
+#
+# Developer:
+# - Discord: @cartelizm
+
+General:
+    Voucher: ""
+    Supervisor: ""
+    Protectives:
+        - ""
+        - ""
+        - ""
+
+# Bu bölümdeki Token ve Channel ayarı istediğiniz kadar arttırılabilir. Token bot sayısını belirtir bir sınırı yoktur.
+# Channels ise girilen token sayısıyla orantılı olmalıdır her tokenin bağlanacağı kanalla eşleşmektedir. Bu sebeple orantılı olmalıdır.
+# Aksi takdirde sistem çalışmayacak ve hata verecektir.
+Welcome:
+    Enabled: false
+    Tokens:
+        - ""
+        - ""
+        - ""
+    Channels:
+        - ""
+        - ""
+        - ""
