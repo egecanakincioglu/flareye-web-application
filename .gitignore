@@ -1,0 +1,87 @@
+# Maven ve IntelliJ IDEA ile Java Spring Boot projeleri için .gitignore
+
+# Genel işletim sistemi dosyaları
+.DS_Store
+Thumbs.db
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+*.class
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+
+# Logs
+logs/
+*.log
+hs_err_pid*
+
+# Spring Boot
+*.war
+*.jar
+
+# Lombok cache
+.lombok/
+
+# Test dosyaları
+test-output/
+surefire-reports/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# IDE çalışma alanı
+.vscode/
+*.swp
+*.swo
+
+# Environment & Secrets
+.env
+*.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+application.properties
+application.yml
+application-*.properties
+application-*.yml
+
+# Node.js (Eğer frontend React veya Angular içeriyorsa)
+node_modules/
+npm-debug.log
+yarn-error.log
+.pnp
+.pnp.js
+
+# Redis & Database
+*.db
+*.sqlite
+dump.rdb
+redis.conf
+postgres-data/
+mysql-data/
+
+# API Keys ve güvenlik kritik dosyalar
+apikeys.json
+secrets.json
