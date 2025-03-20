@@ -1,38 +1,51 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# 💡 Node.js ve Monorepo için Gerekli Klasörler
+node_modules/
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
 
-# Dependencies
-node_modules
-.pnp
-.pnp.js
+# 💡 Turborepo Cache ve Logs
+.turbo/
+turbo.log
 
-# Local env files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Testing
-coverage
-
-# Turbo
-.turbo
-
-# Vercel
-.vercel
-
-# Build Outputs
+# 💡 Next.js Build Çıktıları
 .next/
 out/
-build
-dist
+.cache/
 
+# 💡 Next.js Static ve Public Cache
+public/sw.js
+public/workbox-*.js
+public/worker-*.js
+public/static/
 
-# Debug
+# 💡 TypeScript ve Babel
+*.tsbuildinfo
+.nyc_output/
+coverage/
+dist/
+
+# 💡 Log Dosyaları ve Geçici Dosyalar
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# Misc
+pnpm-debug.log*
 .DS_Store
-*.pem
+Thumbs.db
+
+# 💡 IDE ve Sistem Dosyaları
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.iml
+
+# 💡 MacOS Sistem Dosyaları
+._*
+.Trashes
+.AppleDouble
+.LSOverride
+Icon?
