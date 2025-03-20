@@ -1,0 +1,129 @@
+# ================================
+# 🟢 NODE.JS & NEXT.JS (Turborepo)
+# ================================
+node_modules/
+.pnpm-store/
+.pnpm-debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+turbo.log
+.turbo/
+.next/
+out/
+.cache/
+public/sw.js
+public/workbox-*.js
+public/worker-*.js
+public/static/
+
+# TypeScript ve Babel
+*.tsbuildinfo
+.nyc_output/
+coverage/
+dist/
+
+# ================================
+# 🟡 JAVA & SPRING BOOT
+# ================================
+target/
+bin/
+out/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven & Gradle
+.mvn/
+!**/src/main/**/.mvn/wrapper/maven-wrapper.jar
+.gradle/
+build/
+!**/src/main/**/.gradle/
+!**/src/main/**/build/
+**/build/libs/
+**/build/outputs/
+**/build/tmp/
+
+# Lombok Cache
+.lombok/
+
+# ================================
+# 🟠 DOCKER & CONTAINER
+# ================================
+docker-compose.override.yml
+docker-compose.override.yaml
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*.local
+**/docker-data/
+**/docker-volumes/
+.dockerignore
+
+# ================================
+# 🔵 IDE and EDITORS
+# ================================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.iml
+*.ipr
+*.iws
+
+# JetBrains IDE Cache (IntelliJ, WebStorm, PhpStorm, Rider)
+*.iml
+*.ipr
+*.iws
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/gradle.xml
+.idea/**/libraries
+.idea/maven.xml
+.idea/modules.xml
+.idea/shelf/
+.idea/httpRequests/
+.idea/dataSources/
+.idea/dataSources.ids
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/datasources.xml
+.idea/datasources/
+
+# ================================
+# 🔴 LOG FILES
+# ================================
+logs/
+*.log
+**/log/
+**/*.log
+spring.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ================================
+# 🟣 OS & SYSTEM FILES
+# ================================
+.DS_Store
+Thumbs.db
+._*
+.Trashes
+.AppleDouble
+.LSOverride
+Icon?
+
+# ================================
+# 🟤 CI/CD & DEPLOYMENT
+# ================================
+/terraform.tfstate
+/.terraform/
+.npmrc
+npm-debug.log*
