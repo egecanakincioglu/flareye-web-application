@@ -1,0 +1,15 @@
+server:
+  port: 8761  # Eureka Server'ın çalışacağı port
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  client:
+    register-with-eureka: false  # Eureka kendini kaydetmesin
+    fetch-registry: false  # Başka bir Eureka Server'dan veri çekmesin
+
+  server:
+    enable-self-preservation: false  # Test amaçlı false, prod ortamında true olabilir
+    eviction-interval-timer-in-ms: 60000  # 60 saniyede bir servisleri kontrol et
