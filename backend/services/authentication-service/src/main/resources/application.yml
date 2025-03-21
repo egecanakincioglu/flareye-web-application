@@ -1,0 +1,45 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: authentication-service
+
+  datasource:
+    url: jdbc:postgresql://authentication-postgres:5432/authentication_db
+    username: authentication_user
+    password: secret
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true  # Konsolda SQL sorgularını gösterir (debug amaçlı)
+
+  security:
+    oauth2:
+      authorizationserver:
+        issuer-uri: http://localhost:8081
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8081
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      timeout: 60s  # Alternatif: 60000ms
+      client-type: lettuce  # Eğer Jedis kullanıyorsan 'jedis' yap
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  # Eureka Server'ın adresi
