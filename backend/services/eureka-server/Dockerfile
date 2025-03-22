@@ -1,4 +1,9 @@
 FROM openjdk:21-jdk-slim
-VOLUME /tmp
-COPY target/eureka-server-0.0.1-SNAPSHOT.jar eureka-server.jar
-ENTRYPOINT ["java","-jar","/eureka-server.jar"]
+
+# 🔽 curl yükleniyor
+RUN apt-get update && apt-get install -y curl && apt-get clean
+
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+
+ENTRYPOINT ["java", "-jar", "/app.jar"]
