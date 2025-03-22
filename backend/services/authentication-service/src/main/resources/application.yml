@@ -4,12 +4,10 @@ server:
 spring:
   application:
     name: authentication-service
-
   datasource:
     url: jdbc:postgresql://authentication-postgres:5432/authentication_db
     username: authentication_user
     password: secret
-
   jpa:
     hibernate:
       ddl-auto: update
@@ -17,22 +15,18 @@ spring:
     properties:
       hibernate:
         format_sql: true
-        show_sql: true  # Konsolda SQL sorgularını gösterir (debug amaçlı)
-
+        show_sql: true
   security:
     oauth2:
       authorizationserver:
-        issuer-uri: http://localhost:8081
+        issuer-uri: http://authentication-service:8081  # localhost yerine servis adı
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8081
-
+          issuer-uri: http://authentication-service:8081
   data:
     redis:
-      host: localhost
+      host: flareye_redis  # Docker-compose'daki Redis container adı
       port: 6379
-      timeout: 60s  # Alternatif: 60000ms
-      client-type: lettuce  # Eğer Jedis kullanıyorsan 'jedis' yap
 
 logging:
   level:
@@ -41,5 +35,10 @@ logging:
 
 eureka:
   client:
+    register-with-eureka: true
+    fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8761/eureka/  # Eureka Server'ın adresi
+      defaultZone: http://eureka-server:8761/eureka/
+  instance:
+    hostname: authentication-service
+    prefer-ip-address: false
