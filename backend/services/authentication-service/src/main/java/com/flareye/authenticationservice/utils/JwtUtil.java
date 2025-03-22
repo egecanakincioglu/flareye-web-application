@@ -15,7 +15,6 @@ public class JwtUtil {
 
     private final Key key = Keys.hmacShaKeyFor(Decoders.BASE64.decode(SECRET_KEY));
 
-    // JWT Token oluşturma
     public String generateToken(String email) {
         return Jwts.builder()
                 .setSubject(email)
@@ -25,7 +24,6 @@ public class JwtUtil {
                 .compact();
     }
 
-    // Token içinden e-posta adresini çıkarma
     public String extractEmail(String token) {
         return Jwts.parserBuilder()
                 .setSigningKey(key)
@@ -35,7 +33,6 @@ public class JwtUtil {
                 .getSubject();
     }
 
-    // Token doğrulama
     public boolean validateToken(String token) {
         try {
             Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token);
