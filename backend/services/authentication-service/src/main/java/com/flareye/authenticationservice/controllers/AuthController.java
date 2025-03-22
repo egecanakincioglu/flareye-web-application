@@ -43,7 +43,6 @@ public class AuthController {
         user.setLastName(request.getLastName());
         user.setEmail(request.getEmail());
 
-        // 🔴 Şifreyi encode etmeden önce log ekleyelim:
         System.out.println("Gelen Şifre (register): " + request.getPassword());
         String encodedPassword = passwordEncoder.encode(request.getPassword());
         System.out.println("Hashlenmiş Şifre (register): " + encodedPassword);
@@ -70,7 +69,6 @@ public class AuthController {
 
         User user = userOptional.get();
 
-        // 🔴 Log ekleyerek verileri terminalde inceleyelim:
         System.out.println("Gelen e-posta: " + request.getEmail());
         System.out.println("Gelen şifre: " + request.getPassword());
         System.out.println("Veritabanındaki hashlenmiş şifre: " + user.getPassword());
