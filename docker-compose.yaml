@@ -1,26 +1,58 @@
 version: '3.8'
 
 services:
+  eureka-server:
+    container_name: eureka-server
+    build:
+      context: ./backend/services/eureka-server
+      dockerfile: Dockerfile
+    image: eurekaserver:latest
+    restart: always
+    ports:
+      - "8761:8761"
+    networks:
+      - flareye_network
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8761/actuator/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  api-gateway:
+    build:
+      context: ./backend/services/api-gateway
+      dockerfile: Dockerfile
+    container_name: api-gateway
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+    networks:
+      - flareye_network
+
   authentication-service:
     build:
       context: ./backend/services/authentication-service
       dockerfile: Dockerfile
     container_name: authentication-service
     restart: always
-    ports:
-      - "8081:8081"
+    # ports:
+    #   - "8081:8081"
+    expose:
+      - "8081"
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://authentication-postgres:5432/authentication_db
       SPRING_DATASOURCE_USERNAME: authentication_user
       SPRING_DATASOURCE_PASSWORD: secret
-      SPRING_JPA_HIBERNATE_DDL_AUTO: update
-      SPRING_REDIS_HOST: flareye_redis
-      SPRING_REDIS_PORT: 6379
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
     depends_on:
-      - authentication-postgres
-      - redis
-      - eureka-server
+      eureka-server:
+        condition: service_healthy
+      authentication-postgres:
+        condition: service_started
+      redis:
+        condition: service_started
     networks:
       - flareye_network
 
@@ -34,11 +66,10 @@ services:
       POSTGRES_PASSWORD: secret
     ports:
       - "5433:5432"
-    networks:
-      - flareye_network
     volumes:
       - authentication_postgres_data:/var/lib/postgresql/data
-      - ./scripts/services/authentication-service/migrate.sql:/docker-entrypoint-initdb.d/migrate.sql
+    networks:
+      - flareye_network
 
   redis:
     image: redis:latest
@@ -49,25 +80,9 @@ services:
     networks:
       - flareye_network
 
-  eureka-server:
-    container_name: eureka-server
-    build:
-      context: ./backend/services/eureka-server
-      dockerfile: Dockerfile
-    image: eurekaserver:latest
-    restart: always
-    ports:
-      - "8761:8761"
-    environment:
-      - EUREKA_INSTANCE_HOSTNAME=eureka-server
-      - EUREKA_CLIENT_REGISTER_WITH_EUREKA=false
-      - EUREKA_CLIENT_FETCH_REGISTRY=false
-    networks:
-      - flareye_network
-
-volumes:
-  authentication_postgres_data:
-
 networks:
   flareye_network:
     driver: bridge
+
+volumes:
+  authentication_postgres_data:
